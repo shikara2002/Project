@@ -1,0 +1,54 @@
+<html>
+<head>
+ 
+     <title> login page </title>
+     <link rel="stylesheet" type="text/css" href="Epproject.css"> 
+</head>
+<body>
+      <h2> LOGIN PAGE</h2><br>
+      <div class = "login">
+      <form name = "myform" onsubmit = "return validate_form()">
+          <lable><b>UserName
+          </b>
+          </lable>
+           <input type = "text" name = "UserName"    id ="Uname"  placeholder = "Username" autofocus><br></br>
+          <lable><b> Password
+          </b>
+          </lable>
+           <input type = "password"  name = "pass"    id = "pass" placeholder = "Password" required ><br></br>
+           <button type="submit"  id = "log" class="signupbtn">LOGIN</button>
+               
+          <br><br> 
+          <input type="checkbox" id="check">    
+          <span>Remember me</span>    
+          <br></br> 
+           <right><a href="#">Forgotpassword</a> </right>
+        
+    </form> 
+   <script>
+           function validate_form()
+            {
+              var na = document.myform.UserName.value;
+              var pw = document.myform.pass.value;
+              if (na == null || na=="")
+                {
+                  alert("Name cannot be empty");
+                  return false;
+                }else if(pw.length<8)
+                 {
+                   alert("password Length Must be at least 8");
+                   return false;
+                  }
+              }
+</script>
+<body>
+
+
+    
+
+             
+               
+                        
+</div>    
+</body>    
+</html>

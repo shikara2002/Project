@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SignUp Page</title>
+<script type="text/javascript">
+function validate_form()
+     {
+       var passw=/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+       var phoneno = /^\d{10}$/;
+       var user= /^[0-9a-zA-Z-'_]+$/;
+       var fname= /^[a-zA-Z\s]+$/;
+       var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+       var pw=document.signupform.password.value;
+       var cpw=document.signupform.cpassword.value;
+       var mb=document.signupform.mobile.value;
+       var un=document.signupform.username.value;
+       var fn=document.signupform.fullname.value;
+       var email=document.signupform.email.value;
+       if(pw.match(passw)) 
+        { }
+	else
+	{ 
+	alert('Wrong...! Password....Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters');
+	return false;
+	}
+       if(cpw.match(passw)) 
+        { }
+	else
+	{ 
+	alert('Wrong...! Password....Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters');
+	return false;
+	}
+        
+        if(pw != cpw)
+           {
+             alert("both passwords dont match");
+             return false;
+           }
+       if(mb.match(phoneno))
+        {}
+       else
+        {
+        alert("Invalid Number ..!");
+        return false;
+        }
+       if(un.match(user))
+        {}
+       else
+        {
+        alert("Invalid UserName ..!");
+        return false;
+        }
+        if(fn.match(fname))
+        {}
+       else
+        {
+        alert("Invalid Full name ..!");
+        return false;
+        }
+        if(mailformat.match(email))
+        {}
+       else
+        {
+        alert("Invalid Email ..!");
+        return false;
+        }
+}  
+</script>
+<style>
+html{
+ background-image: url("banner1.jpg");
+}
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: rgb(230, 236, 240);s
+            font-family: sans-serif;
+        }
+        
+        .signupbox {
+            width: 600px;
+            height: 710px;
+            background: black;
+            color: white;
+            top: 50%;
+            left: 50%;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            box-sizing: border-box;
+            padding: 70px 30px
+        }
+        
+        .avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 25%;
+            position: absolute;
+            top: -75px;
+            left: 29%
+        }
+        
+        h1 {
+            margin: 0;
+            padding: 0 0 20 px;
+            text-align: center;
+            font-size: 22px;
+        }
+        
+        .signupbox p {
+            margin: 0;
+            padding: 0;
+            font-weight: bold;
+        }
+        
+        .signupbox input {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        
+        .signupbox input[type="text"],input[type="email"],
+        input[type="password"] {
+            border: none;
+            border-bottom: 1px solid white;
+            background: transparent;
+            outline: none;
+            height: 40px;
+            color: white;
+            font-size: 18px;
+        }
+        
+        .signupbox input[type="submit"] {
+            border: none;
+            outline: none;
+            height: 40px;
+            background: red;
+            color: white;
+            font-size: 18px;
+            border-radius: 20px;
+        }
+        
+        .signupbox input[type="submit"]:hover {
+            cursor: pointer;
+            background: #ffc107;
+            color: #000;
+        }
+        
+        .signupbox a {
+            text-decoration: none;
+            font-size: 12px;
+            line-height: 20px;
+            color: darkgrey;
+        }
+        
+        .signupbox a:hover {
+            color: #ffc107;
+        }
+</style>
+</head>
+<body>
+        <div class="signupbox">
+             
+            <h1>SignUp Here</h1>
+            <form name="signupform" action="Register" method="post" onsubmit="return validate_form()">
+                <p>UserName</p>
+                <input type="text" name= "username" placeholder="Create Username" required/> 
+                <p>Full Name</p>
+                <input type="text" name= "fullname" placeholder="Enter Full Name"  required/>
+                <p>Email</p>
+                <input type="email" name= "email" placeholder="Enter Email" required autofocus/>
+                <p>Mobile No</p>
+                <input type="text" name= "mobile" placeholder="Enter Mobile Number" required/>
+                <p>Password</p>
+                <input type="Password" name="password" placeholder="Create Password" required/>
+                <p>Confirm Password</p>
+                <input type="Password" name="cpassword" placeholder="Re-Enter Password" required/>
+                <input type="submit" name="submit" value="Register"/><br>
+                <a href="#">Forget your Password ?</a><br>
+                <a href="login.html">Already have an account ?</a>
+            </form>
+        </div>
+
+ </body>
+ 
+
+</html>

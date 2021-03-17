@@ -1,0 +1,85 @@
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+.signup{  
+        width: 400px;  
+        overflow: hidden;  
+        margin: auto;  
+        margin: 20 0 0 600px;  
+        padding: 80px;  
+        background: grey;  
+        border-radius: 15px ;  
+          
+} 
+body  
+{  
+    margin: 50;  
+    padding: 0;  
+    background-color:#23463f;  
+    font-family: 'Arial';  
+} 
+
+
+
+button {
+  background-color: green;
+  color: black;
+  padding: 14px 20px;
+  margin: 8px 0;
+  
+  cursor: pointer;
+  width: 100%;
+  
+}
+h2{  
+    text-align: center;  
+    color: #277582;  
+    padding: 20px;  
+}  
+label{  
+    color: black;  
+    font-size: 17px;  
+}  
+#email{  
+    width: 353px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 4px;  
+    padding-left: 10px;  
+}  
+#Pass{  
+    width: 350px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 4px;  
+    padding-left: 10px;  
+      
+}  
+#log{  
+    width: 400px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 50px;  
+    padding-left: 17px;  
+    color: blue;  
+  
+  
+} 
+
+
+
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: red;
+}
+
+
+.cancelbtn, .signupbtn {
+  float: right;
+  width: 50%;
+}

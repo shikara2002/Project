@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login Page</title>
+<script type="text/javascript">
+function validate_loginform()
+     {
+       var passw=/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+       var user= /^[0-9a-zA-Z-'_]+$/;
+       var pw=document.loginform.password.value;
+       var un=document.loginform.username.value;
+       if(pw.match(passw)) 
+        { }
+	else
+	{ 
+	alert('Wrong...! Password....Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters');
+	return false;
+	} 
+       if(un.match(user))
+        {}
+       else
+        {
+        alert("Invalid UserName ..!");
+        return false;
+        }
+         
+}
+</script>
+ 
+<style>
+html{
+ background-image: url("banner1.jpg");
+}
+         body {
+            margin: 0;
+            padding: 0;
+            background-color: rgb(230, 236, 240);
+            font-family: sans-serif;
+        }
+        
+        .loginbox {
+            width: 600px;
+            height: 720px;
+            background: black;
+            color: white;
+            top: 50%;
+            left: 50%;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            box-sizing: border-box;
+            padding: 70px 30px
+        }
+        h1 {
+            margin: 0;
+            padding: 0 0 20 px;
+            text-align: center;
+            font-size: 22px;
+        }
+        
+        .loginbox p {
+            margin: 0;
+            padding: 0;
+            font-weight: bold;
+        }
+        
+        .loginbox input {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        
+        .loginbox input[type="text"],input[type="password"],
+        input[type="date"] {
+            border: none;
+            border-bottom: 1px solid white;
+            background: transparent;
+            outline: none;
+            height: 40px;
+            color: red;
+            font-size: 18px;
+        }
+         .loginbox select {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        
+         select {
+            border: none;
+            border-bottom: 1px solid white;
+            background: transparent;
+            outline: none;
+            height: 40px;
+            color: red;
+            font-size: 18px;
+        }
+        
+        .loginbox input[type="submit"] {
+            border: none;
+            outline: none;
+            height: 40px;
+            background: red;
+            color: white;
+            font-size: 18px;
+            border-radius: 20px;
+        }
+        
+        .loginbox input[type="submit"]:hover {
+            cursor: pointer;
+            background: #ffc107;
+            color: #000;
+        }
+        
+        .loginbox a {
+            text-decoration: none;
+            font-size: 12px;
+            line-height: 20px;
+            color: darkgrey;
+        }
+        
+        .loginbox a:hover {
+            color: #ffc107;
+        }
+/* The container */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: red;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+
+
+.container1 {
+ padding: 16px;
+ padding-left: 10%;
+ padding-right: 0%;
+} 
+</style>
+</head>
+<body>
+        <div class="loginbox">
+            <h1>Courier Details</h1>
+            <form name="loginform" action="Payment.html" method="post" onsubmit="return validate_loginform()">
+		<p>Courier Id</p>
+                <input type="text" name= "name" placeholder="Enter Reciever Name" required/>
+		<p>To person</p>
+                <input type="text" name= "name" placeholder="Enter Reciever Name" required/>
+		<p>To Address</p>
+                <input type="text" name= "address" placeholder="Enter Reciever Address" required/>
+                <label for="birthday"><p>Expected Received Date :</p></label>
+                <input type="date" id="birthday" name="birthday">
+                <p>Courier Password</p>
+                <input type="password" name= "name" placeholder="Enter password" required/>
+                <p>Confirm The Booking :</p><br>
+                <label class="container">Yes
+ 		 <input type="radio"  name="radio">
+  		<span class="checkmark"></span>
+		</label>
+		<label class="container">No
+		  <input type="radio" name="radio">
+ 		 <span class="checkmark"></span>
+		</label>
+                <input type="submit" name="submit" value="Book"/><br>
+                 
+
+            </form>
+        </div>
+</body>
+
+
+</html>

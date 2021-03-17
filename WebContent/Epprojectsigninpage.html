@@ -1,0 +1,63 @@
+<html>
+<form >
+  <script>
+     function validate_form()
+     {
+       
+       var pw = document.signup.psw.value;
+       var cpw=document.signup.re-entering-psw.value;
+       if(pw.length<8)
+          {
+            alert("password Length Must be at least 8");
+            return false;
+           }
+           else if(pw != cpw)
+           {
+             alert("both passwords dont match");
+             return false;
+           }
+
+
+       }
+ </script>
+
+<body> 
+  <div>
+   <body> 
+    
+    <h1><center>SIGN UP</center></h1>
+   
+  
+    <p><h2><center>Please fill the details  to create an account.</center></h2></p>
+    <hr>
+    
+    
+    <link rel="stylesheet" type="text/css" href="Epprojectsignup.css"> 
+     <div class = "signup">
+    <form id = "signup " onsubmit = "return validate_form()">
+    <label for="email"><b>Email</b></label>
+    <input type="email" placeholder="Enter Email" id = email name="email" required autofocus><br></br>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" id = pass name="psw" required><br></br>
+
+    <label for="psw-repeat"><b>confirm Password</b></label>
+    <input type="password" placeholder="confirm Password" id = pass name="re-entering-psw" required><br></br>
+
+    <label>
+      <input type="checkbox" checked="checked" name="Remember" style="margin-bottom:15px"> Remember me <br></br>
+    </label>
+    <label>
+      <input type="checkbox" checked="checked" name=" terms and privacy " style="margin-bottom:15px"> I Agree  all the terms and conditions
+    </label>
+
+    
+     
+      <button type="button" class="cancelbtn">Cancel</button>
+      <button type="submit" class="signupbtn">Sign Up</button>
+    </div>
+   </body>
+  
+
+</form>
+</html>
